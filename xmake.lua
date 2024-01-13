@@ -2,13 +2,7 @@ add_rules("mode.debug", "mode.release")
 
 add_repositories("liteldev-repo https://github.com/LiteLDev/xmake-repo.git")
 
-if not has_config("vs_runtime") then
-    if is_mode("debug") then
-        set_runtimes("MDd")
-    else
-        set_runtimes("MD")
-    end
-end
+set_runtimes("MT")
 
 add_requires("fmt 10.1.1")
 add_requires("raw_pdb 2022.10.17")
